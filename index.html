@@ -68,14 +68,14 @@
         cursor: pointer;
     }
 
-    section h1 {
+    div h1 {
         color: hsl(0, 0%, 100%);
         font-size: 24px;
         font-weight: 600;
         margin: 25px 0 0 0;
     }
 
-    section h1:hover,
+    div h1:hover,
     .avatar p > .owner:hover {
         color: hsl(178, 100%, 50%);
         cursor: pointer;
@@ -174,30 +174,32 @@
                 </div>
             </div>
         </header>
-        <section class="detail">
-            <h1>Equilibrium #3429</h1>
-            <p>Our Equilibrium collection promotes balance and calm.</p>
-        </section>
-        <section class="stock">
-            <div class="eth">
-                <img src="./images/icon-ethereum.svg" alt="price">
-                <p>0.041 ETH</p>
+        <section>
+            <div class="detail">
+                <h1>Equilibrium #3429</h1>
+                <p>Our Equilibrium collection promotes balance and calm.</p>
             </div>
-            <div class="timeleft">
-                <img src="./images/icon-clock.svg" alt="timeleft">
-                <p>3 days left</p>
+            <div class="stock">
+                <div class="eth">
+                    <img src="./images/icon-ethereum.svg" alt="price">
+                    <p>0.041 ETH</p>
+                </div>
+                <div class="timeleft">
+                    <img src="./images/icon-clock.svg" alt="timeleft">
+                    <p>3 days left</p>
+                </div>
             </div>
-        </section>
-            <hr>
-        <section class="avatar">
-            <img src="./images/image-avatar.png" alt="avatar">
-            <p>Creation of <span class="owner">Jules Wyvern</span></p>
+                <hr>
+            <div class="avatar">
+                <img src="./images/image-avatar.png" alt="avatar">
+                <p>Creation of <span class="owner">Jules Wyvern</span></p>
+            </div>
         </section>
     </main>
     <footer>
         <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Ye Minn Thein</a>.
+        Coded by <a href="https://github.com/ymt-github" target="_blank">Ye Minn Thein</a>.
         </div>
     </footer>
 </body>
