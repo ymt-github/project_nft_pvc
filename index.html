@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: hsl(217, 54%, 11%);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        border-radius: 15px;
+        font-family: 'Outfit', sans-serif;
+        background-color: hsl(216, 50%, 16%);
+    }
+
+    header {
+        margin: 25px 25px 0 25px;
+    }
+
+    .originalImage {
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .originalImage img {
+        width: 100%;
+        display: block;
+    }
+
+    .overlayImage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: hsla(178, 100%, 50%, 0.5);
+        display: none;
+    }
+
+    .overlayImage img{
+        position: absolute;
+        width: 50px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .originalImage:hover .overlayImage{
+        display: block;
+        cursor: pointer;
+    }
+
+    section h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: 24px;
+        font-weight: 600;
+        margin: 25px 0 0 0;
+    }
+
+    section h1:hover,
+    .avatar p > .owner:hover {
+        color: hsl(178, 100%, 50%);
+        cursor: pointer;
+    }
+
+    .detail {
+        color: hsl(215, 51%, 70%);
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 30px;
+        margin: 0 25px 0 25px;
+    }
+
+    .stock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 25px -5px 25px;
+    }
+
+    .eth img {
+        width: 12px;
+        height: 20px;
+        margin: 0 7px 0 0;
+    }
+
+    .eth {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: hsl(178, 100%, 50%);
+    }
+
+    .timeleft img {
+        width: 20px;
+        height: 20px;
+        margin: 0 7px 0 0;
+    }
+
+    .timeleft {
+        display: flex;
+        align-items: center;
+        color: hsl(215, 51%, 70%);
+    }
+
+    hr {
+        border: none;
+        background: hsl(215, 32%, 27%);
+        height: 0.1px;
+        width: 330px;
+    }
+
+    .avatar {
+        display: flex;
+        align-items: center;
+        margin: 0 0 15px 25px;
+    }
+
+    .avatar img {
+        width: 34px;
+        height: 34px;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 40px;
+        margin: 0 15px 0 0;
+    }
+
+    .avatar p {
+        color: hsl(215, 51%, 70%);
+        font-size: 18px;
+        font-weight: 200;
+    }
+
+    .avatar p .owner {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+        margin: 10px 0 0 0;
+    }
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+  </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="originalImage">
+                <img src="./images/image-equilibrium.jpg" alt="">
+                <div class="overlayImage">
+                    <img src="./images/icon-view.svg" alt="">
+                </div>
+            </div>
+        </header>
+        <section class="detail">
+            <h1>Equilibrium #3429</h1>
+            <p>Our Equilibrium collection promotes balance and calm.</p>
+        </section>
+        <section class="stock">
+            <div class="eth">
+                <img src="./images/icon-ethereum.svg">
+                <p>0.041 ETH</p>
+            </div>
+            <div class="timeleft">
+                <img src="./images/icon-clock.svg">
+                <p>3 days left</p>
+            </div>
+        </section>
+            <hr>
+        <section class="avatar">
+            <img src="./images/image-avatar.png">
+            <p>Creation of <span class="owner">Jules Wyvern</span></p>
+        </section>
+    </main>
+    <footer>
+        <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Ye Minn Thein</a>.
+        </div>
+    </footer>
+</body>
+</html>
